@@ -1,0 +1,287 @@
+# Product Manager Workflow Rules
+
+## PRD (Product Requirements Document) Structure and Formatting
+
+### Standard PRD Structure
+All PRDs must follow this structure:
+
+1. **Header Section**
+   - Title: [Feature/Product Name] - PRD
+   - Version: [X.Y]
+   - Last Updated: [YYYY-MM-DD]
+   - Author: [Name]
+   - Status: [Draft | In Review | Approved | Deprecated]
+
+2. **Executive Summary**
+   - Brief overview (2-3 sentences)
+   - Business objectives
+   - Success metrics
+
+3. **Problem Statement**
+   - What problem are we solving?
+   - Who is affected?
+   - Current state vs. desired state
+
+4. **User Stories & Requirements**
+   - User personas
+   - User stories (As a [persona], I want [goal], so that [benefit])
+   - Functional requirements (numbered)
+   - Non-functional requirements (performance, security, etc.)
+
+5. **Technical Considerations**
+   - Dependencies
+   - Technical constraints
+   - Integration points
+   - Data requirements
+
+6. **Design & UX**
+   - Wireframes/mockups (links or references)
+   - User flows
+   - Design principles
+
+7. **Success Metrics**
+   - Key Performance Indicators (KPIs)
+   - Success criteria
+   - Measurement plan
+
+8. **Timeline & Milestones**
+   - Phased approach (if applicable)
+   - Key milestones
+   - Dependencies
+
+9. **Risks & Mitigation**
+   - Identified risks
+   - Mitigation strategies
+
+10. **Appendices**
+    - Research/data references
+    - Related documents
+    - Glossary
+
+### PRD Formatting Rules
+- Use Markdown format
+- Headers: H1 for title, H2 for main sections, H3 for subsections
+- Use bullet points for lists
+- Include tables for requirements tracking
+- Add links to related Jira tickets, Confluence pages, and design files
+- Use code blocks for technical specifications
+- Include version history table at the top
+- File naming: `PRD-[Feature-Name]-[YYYY-MM-DD].md`
+
+## Jira Ticket Creation
+
+### Mandatory Fields
+- **Summary**: Clear, concise title (max 60 characters)
+- **Description**: Use template below
+- **Issue Type**: Story, Task, Bug, Epic, etc.
+- **Priority**: Must be set (Blocker, Critical, High, Medium, Low)
+- **Labels**: Include relevant tags (e.g., `frontend`, `backend`, `api`, `ui/ux`)
+- **Components**: Assign to relevant component(s)
+- **Sprint**: Link to current/future sprint
+- **Epic Link**: **MANDATORY** - Always link to parent epic. If no epic exists, create one first.
+
+### Ticket Description Template
+```markdown
+## Overview
+[Brief description of the work]
+
+## Acceptance Criteria
+- [ ] Criterion 1
+- [ ] Criterion 2
+- [ ] Criterion 3
+
+## User Story
+As a [user type], I want [goal], so that [benefit]
+
+## Technical Notes
+[Any technical considerations, dependencies, or constraints]
+
+## Design/UX
+[Link to Figma/design files or description]
+
+## Related Links
+- PRD: [link]
+- Epic: [link]
+- Related Tickets: [links]
+- Confluence: [link]
+```
+
+### Epic Creation Rules
+- Epics must be created before stories/tasks
+- Epic name format: `[Feature Area] - [Brief Description]`
+- Epic description must include:
+  - Business value
+  - Success metrics
+  - High-level scope
+  - Timeline estimate
+- All child tickets MUST link to the epic
+
+### Ticket Workflow
+1. Create Epic (if not exists)
+2. Create Story/Task/Bug
+3. **Always set Epic Link field** to parent epic
+4. Add labels and components
+5. Assign to sprint
+6. Add description using template
+7. Link to PRD (if applicable)
+8. Add watchers (stakeholders, engineers, designers)
+
+## Status Report Format
+
+### Weekly Status Report Structure
+All status reports must follow this format:
+
+**Report Title**: `Status Report - Week of [YYYY-MM-DD]`
+
+1. **Executive Summary** (2-3 bullet points)
+   - Key highlights
+   - Overall status (Green/Yellow/Red)
+
+2. **This Week's Accomplishments**
+   - Completed features/tickets
+   - Key milestones reached
+   - Format: `[Ticket #] - [Brief description]`
+
+3. **In Progress**
+   - Current work items
+   - Blockers or risks
+   - Expected completion dates
+
+4. **Next Week's Priorities**
+   - Planned work
+   - Upcoming milestones
+   - Dependencies
+
+5. **Metrics & KPIs**
+   - Key metrics (if applicable)
+   - Trend analysis
+   - Targets vs. actuals
+
+6. **Risks & Blockers**
+   - Current blockers
+   - Risk assessment
+   - Mitigation plans
+
+7. **Stakeholder Updates**
+   - Decisions needed
+   - Upcoming reviews/meetings
+   - Communication highlights
+
+### Status Report Formatting
+- Use Markdown format
+- Include traffic light indicators: 🟢 Green, 🟡 Yellow, 🔴 Red
+- Add links to relevant tickets, PRDs, and documents
+- Use tables for metrics
+- File naming: `Status-Report-[YYYY-MM-DD].md`
+- Store in `docs/status-reports/` directory
+
+### Status Report Timeline
+- Due every Friday EOD
+- Send to stakeholders via email
+- Publish to Confluence (see Confluence workflow below)
+
+## Confluence Publishing Workflow
+
+### Pre-Publishing Checklist
+- [ ] Document reviewed and proofread
+- [ ] All links verified and working
+- [ ] Images/screenshots included and optimized
+- [ ] Tags/labels added
+- [ ] Page permissions set correctly
+- [ ] Related pages linked
+- [ ] Table of contents added (for long documents)
+
+### Confluence Page Structure
+1. **Page Title**: Clear, descriptive, searchable
+2. **Labels**: Add relevant labels (e.g., `prd`, `status-report`, `product`, `feature`)
+3. **Space**: Publish to appropriate space (e.g., Product, Engineering, Company)
+4. **Parent Page**: Link to parent page if part of a hierarchy
+5. **Table of Contents**: Use Confluence macro for documents > 3 sections
+
+### Publishing Workflow Steps
+1. **Draft Creation**
+   - Create page in Confluence
+   - Use appropriate template (if available)
+   - Add content following structure guidelines
+
+2. **Review Process**
+   - Share draft link with reviewers
+   - Collect feedback
+   - Make revisions
+   - Get approval (if required)
+
+3. **Final Publishing**
+   - Set page permissions (view/edit)
+   - Add to relevant space navigation (if applicable)
+   - Add watchers/notifications
+   - Publish page
+
+4. **Post-Publishing**
+   - Share link with stakeholders
+   - Add to index/landing pages
+   - Update related pages with links
+   - Archive old versions (if updating existing page)
+
+### Confluence Page Types & Templates
+
+**PRD Pages**
+- Space: Product/Product Requirements
+- Template: PRD Template
+- Labels: `prd`, `requirements`, `[feature-name]`
+- Parent: Product Requirements Index
+
+**Status Reports**
+- Space: Product/Status Reports
+- Template: Status Report Template
+- Labels: `status-report`, `weekly-update`, `[team-name]`
+- Parent: Status Reports Archive
+- Create monthly/quarterly summary pages
+
+**Meeting Notes**
+- Space: Product/Meetings
+- Template: Meeting Notes Template
+- Labels: `meeting-notes`, `[meeting-type]`, `[date]`
+- Include: Attendees, Agenda, Decisions, Action Items
+
+**Feature Documentation**
+- Space: Product/Features
+- Template: Feature Documentation Template
+- Labels: `feature-doc`, `[feature-name]`
+- Link to: PRD, Design files, Jira epic
+
+### Confluence Best Practices
+- Use consistent formatting (headers, lists, tables)
+- Include screenshots/mockups with alt text
+- Add "Last Updated" date at top of page
+- Use page properties macro for metadata
+- Create child pages for detailed sections
+- Link related pages in "Related Pages" section
+- Use expand macros for long content
+- Add comments for discussions (don't edit main content)
+
+### Version Control
+- Use Confluence version history for major changes
+- Add version notes explaining changes
+- Archive superseded pages to Archive space
+- Keep current version easily accessible
+
+## General Workflow Rules
+
+### File Organization
+- PRDs: `docs/prds/`
+- Status Reports: `docs/status-reports/`
+- Templates: `docs/templates/`
+- Use consistent naming conventions
+
+### Communication
+- Always link related documents (PRD ↔ Jira ↔ Confluence)
+- Include stakeholders in ticket watchers
+- Update status reports weekly
+- Publish to Confluence within 24 hours of completion
+
+### Quality Standards
+- All documents must be proofread before publishing
+- Use clear, concise language
+- Include visual aids where helpful
+- Maintain consistency across all documents
+- Keep documents up-to-date
