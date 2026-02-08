@@ -505,17 +505,20 @@ The voice AI agent will use a microservices architecture:
 
 ## Document Links
 
-**Published to Confluence**: [URL will go here]
+**Published to Confluence**: https://snehshah.atlassian.net/wiki/spaces/~5f65b158cacd8300778c90ea/pages/65704/Conversa-AI+Voice+Agent+Feature+PRD
 
-**Related Jira Epic**: [Epic key will go here]
+**Related Jira Epic**: KAN-1
 
 **Related Jira Tickets**:
-- [TICKET-XXX] - Speech-to-text integration
-- [TICKET-XXX] - NLP model development
-- [TICKET-XXX] - Voice UI components
-- [TICKET-XXX] - Conversation management system
-- [TICKET-XXX] - Product API integration
-- [TICKET-XXX] - Analytics and monitoring
+- [KAN-1] - Voice AI Agent - Natural Voice Interaction Feature (Epic)
+- [KAN-2] - FR-1: Voice Input Capture
+- [KAN-3] - FR-2: Speech-to-Text Conversion
+- [KAN-4] - FR-3: Natural Language Understanding
+- [KAN-5] - FR-4: Conversation Management
+- [KAN-6] - FR-5: Text-to-Speech Response
+- [KAN-7] - FR-6: Product Integration
+- [KAN-8] - FR-7: Conversation Transcript & History
+- [KAN-9] - FR-8: Error Handling & Recovery
 
 **Design Files**:
 - [Link to Figma/design tool - Voice UI designs]
